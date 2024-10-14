@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Personal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Web Personal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#about">Sobre Mi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#projects">Estudios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contacto</a>
+            </li>
+        </ul>
+        <form class="form-inline ml-auto" id="searchForm">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar proyectos" aria-label="Buscar" id="searchInput">
+            <button class="btn btn-outline-success moasdoasdy-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+    </div>
+</nav>
+
+<!-- Carrusel -->
+<div id="carouselExampleIndicators" class="carousel slide my-5" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="./img/main-logo.jpg" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+            <img src="img/small-logo.png" class="d-block w-100" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+            <img src="img/I3.jpg" class="d-block w-100" alt="Slide 3">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+</div>
+
+<!-- Sobre Nosotros -->
+<section id="about" class="container my-5">
+    <h2 class="SobreMi">Sobre Mi</h2>
+    <p class="SobreMi">Soy un joven de 19 años que actualmente esta estudiando un ciclo de Grado Superior de Administración de Sistemas Informaticos en Red, en el instituto Cuatrovientos.
+        Mis intereses personales son seguir aprendiendo y formandome en el mundo de la Informatica.</p>
+    <p class="SobreMi">Estoy son los estudios que he realizado anteriormente:</p>
+    <ul class="SobreMi">
+        <li class="SobreMi">ESO (Andra Mari Ikastola, Etxarri-Aranatz)</li>
+        <li class="SobreMi">Ciclo de Grado Medio de Sistemas Microinformaticos y Redes (Instituto Cuatrovientos)</li>
+        <li class="SobreMi">Certificado de Ingles B1</li>
+    </ul>
+</section>
+
+<!-- Proyectos -->
+<section id="projects" class="container my-5">
+    <h2>Proyectos</h2>
+    <div class="row" id="projectsContainer">
+        <div class="col-md-4 project-card" data-title="Proyecto 1" data-description="Descripción detallada del Proyecto 1. Este proyecto incluye características como...">
+            <div class="card mb-4 shadow-sm">
+                <img src="img/I3.jpg" class="card-img-top" alt="Proyecto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Proyecto I3</h5>
+                    <p class="card-text">Proyecto en colaboración con el instituto Salesianos, impulsando la inclusión.</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#projectModal1">Más Información</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 project-card" data-title="Proyecto 2" data-description="Descripción detallada del Proyecto 2. Este proyecto incluye características como...">
+            <div class="card mb-4 shadow-sm">
+                <img src="img/Burlada.jpg" class="card-img-top" alt="Proyecto 2">
+                <div class="card-body">
+                    <h5 class="card-title">Colaboración con Centro de Mayores Burlada</h5>
+                    <p class="card-text">Ayudar y enseñar conceptos básicos sobre Tecnología a personas de la tercera edad</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#projectModal2">Más Información</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 project-card" data-title="Proyecto 3" data-description="Descripción detallada del Proyecto 3. Este proyecto incluye características como...">
+            <div class="card mb-4 shadow-sm">
+                <img src="img/Gaztelan.jpg" class="card-img-top" alt="Proyecto 3">
+                <div class="card-body">
+                    <h5 class="card-title">Colaboración con Fundación Gaztelan</h5>
+                    <p class="card-text">Ayudar y enseñar conceptos basicos sobre la tecnologia a personas provenidas de fuera.</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#projectModal3">Más Información</button>
+                </div>
+            </div>
+        </div>
+        <!-- Agrega más proyectos según sea necesario -->
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModalLabel">PROYECTO I3</h5>
+                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="projectDescription"></p>
+                <p> El objetivo era crear dispositivos electronicos que ayuden al alumnado con cierta discapacidad para atender a sus necesidades basicas.
+                    Mayormente al alumnado de FP Básica y FP Especial</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModalLabel">BURLADA</h5>
+                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="projectDescription"></p>
+                <p> Este proyecto consistia en enseñar conceptos básicos sobre la Tecnología e Informatica, a personas de la tercera edad. Las clases
+                    se daban en el Centro de Mayores de Burlada, alli resolviamos dudas y explicabamos diferentes conceptos sobre este tema.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="projectModal3" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModalLabel">Colaboración con Gaztelan</h5>
+                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="projectDescription"></p>
+                <p> Este proyecto consistia en enseñar conceptos básicos sobre la Tecnología e Informatica, a personas llegadas del extranjero a Pamplona. 
+                    Al no tener muchos recursos para aprender sobre este tema, colaboramos con la Fundación Gaztelan para enseñar conceptos basicos a estas 
+                    personas y resolverles dudas con ciertos tramites.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contacto -->
+<section id="contact" class="container my-5">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+        <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="Introduce tu correo" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea class="form-control" id="message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</section>
+
+<!-- Modal de Confirmación -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmationModalLabel">¡Gracias!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Tu mensaje ha sido enviado correctamente. ¡Gracias por contactarnos!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#contactForm').on('submit', function(e) {
+            e.preventDefault(); // Evita el envío real del formulario
+
+            // Validar que el correo electrónico tiene un formato válido
+            var email = $('#email').val();
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (!emailPattern.test(email)) {
+                alert('Por favor, introduce un correo electrónico válido.');
+            } else {
+                // Si la validación es correcta, muestra el modal de confirmación
+                $('#confirmationModal').modal('show');
+            }
+        });
+    });
+</script>
+
+
+<!-- Footer -->
+<footer class="text-center py-4 bg-light">
+    <p id="footer">Oier Uzkudun - Implantación de Aplicaciones Web</p>
+    
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+
